@@ -6,7 +6,7 @@ import Parent from "./Components/Parent";
 export default function App() {
   return (
     <TodoProvider>
-      <div style={{ padding: "20px" }}>
+      <div >
         <h2>Todo App with useReducer + Context</h2>
         <AddTodo />
         <Parent />

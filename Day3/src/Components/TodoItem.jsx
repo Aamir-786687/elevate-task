@@ -13,25 +13,20 @@ export default function TodoItem({ todo }) {
   };
 
   return (
-    <li style={{ marginBottom: "10px" }}>
-      <span
-        style={{
-          textDecoration: todo.completed ? "line-through" : "none",
-          marginRight: "10px",
-        }}
-      >
+    <li>
+      <span>
         {todo.text}
       </span>
 
-      <span style={{ fontWeight: "bold", color: todo.completed ? "green" : "red" }}>
+      <span>
         {todo.completed ? " Completed" : " Not Completed"}
       </span>
 
-      <button onClick={handleToggle} style={{ marginLeft: "10px" }}>
+      <button onClick={handleToggle}>
         {todo.completed ? " Mark as Incomplete" : " Mark as Completed"}
       </button>
 
-      <button onClick={handleRemove} style={{ marginLeft: "10px" }}>
+      <button onClick={handleRemove}>
          Remove
       </button>
     </li>

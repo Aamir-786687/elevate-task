@@ -6,7 +6,7 @@ export default function GrandChild() {
   const { state } = useContext(TodoContext);
 
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div >
       <h3>Todo List (Accessed in Deep Component)</h3>
       <TodoList todos={state} />
     </div>
