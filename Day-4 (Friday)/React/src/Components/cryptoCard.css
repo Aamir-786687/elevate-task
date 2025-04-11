@@ -1,0 +1,31 @@
+.card {
+    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  img {
+    width:150px;
+    height: 150px;
+  }
+  
+  .card-info h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  
+  .card-info p {
+    font-size: 16px;
+    color: #333;
+  }
+  
