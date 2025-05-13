@@ -14,7 +14,7 @@ const signup = async (req, res) => {
     const hash = await argon2.hash(password);
     const user = new User({ username, password: hash });
     await user.save();
-    res.status(201).json({ message: "Signup successful" });
+    res.status(201).json({ user, message: "Signup successful" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -38,15 +38,15 @@ const login = async (req, res) => {
 
 const getUser = async (req, res) => {
   try {
-    const user = await User.findOne(req.body); 
+    const user = await User.findOne(req.body);
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    res.status(200).json(user); 
+    res.status(200).json(user);
   } catch (error) {
-    res.status(500).json({ error: error.message }); 
+    res.status(500).json({ error: error.message });
   }
 };
 
